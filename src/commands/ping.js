@@ -5,10 +5,14 @@ exports.default = commandModule({
     name: 'ping',
     plugins: [publish()],
     description: 'Ping/Pong',
-    type: CommandType.Both,
-    execute(ctx) {
-        ctx.reply({
-            content: `API Heartbeat:\n${ctx.client.ws.ping}ms`
-        })
-    }
-});
+    type: CommandType.Slash,
+    async execute(ctx) {
+            const msg = await ctx.reply({
+                content: `Pinging...`
+            })
+
+            msg.edit({
+                content: `Ping - ${msg.createdTimestamp - ctx.createdTimestamp}ms\nAPI Round-trip - ${ctx.client.ws.ping}ms`
+            })
+        }
+    });
