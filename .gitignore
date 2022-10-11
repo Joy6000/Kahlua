@@ -1,7 +1,7 @@
 .kahlua
 package-lock.json
 tsconfig.json
-config.json
 Kahlua.iml
 .idea
 node_modules
+.env

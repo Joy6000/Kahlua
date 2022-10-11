@@ -1,5 +1,6 @@
 const { GatewayIntentBits } = require("discord.js")
-const {Sern} = require("@sern/handler");
+const { Sern } = require("@sern/handler");
+require('dotenv').config()
 
 module.exports = class Kahlua extends require("discord.js").Client {
     constructor(options = {
@@ -11,7 +12,6 @@ module.exports = class Kahlua extends require("discord.js").Client {
     }
 
     start() {
-        const {token} = require("../config.json")
         this.on("ready", () => {
             console.log("We are in.")
         })
@@ -24,7 +24,7 @@ module.exports = class Kahlua extends require("discord.js").Client {
             commands: 'src/commands'
         })
 
-        this.login(token)
+        this.login(process.env.TOKEN)
         return this
     }
 }
