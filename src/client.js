@@ -6,6 +6,8 @@ module.exports = class Kahlua extends require("discord.js").Client {
     constructor(options = {
         intents: [
             GatewayIntentBits.Guilds,
+            GatewayIntentBits.GuildMembers,
+            GatewayIntentBits.GuildPresences
         ]
     }) {
         super(options);
