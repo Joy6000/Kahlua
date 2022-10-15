@@ -3,7 +3,7 @@ const { Sern } = require("@sern/handler");
 const { Sequelize } = require("sequelize");
 require('dotenv').config()
 
-module.exports.Kahlua = class Kahlua extends require("discord.js").Client {
+module.exports.default = new class Kahlua extends require("discord.js").Client {
     constructor(options = {
         intents: [
             GatewayIntentBits.Guilds,
