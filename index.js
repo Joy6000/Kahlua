@@ -1,2 +1,2 @@
-const Kahlua = require("./src/client")
+const { Kahlua } = require("./src/client")
 new Kahlua().start()

@@ -6,3 +6,4 @@ Kahlua.iml
 node_modules
 .env
 database.sqlite
+test.js
