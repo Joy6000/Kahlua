@@ -1,21 +1,15 @@
 const { CommandType, commandModule } = require('@sern/handler');
-const { publish } = require("../../utils/publish")
-const { TestChannels } = require("../models.sql")
+const { publish, ownerOnly } = require("../../../utils/plugins.js")
+const { TestChannels } = require("../../models.sql")
 
 exports.default = commandModule({
     name: 'owneronly',
-    plugins: [publish()],
+    plugins: [publish(), ownerOnly()],
     description: 'Owner Only',
     type: CommandType.Slash,
     async execute(ctx) {
         // _____TESTING_____ //
-        const channel = await TestChannels.findOne({
-            where: {
-                name: "generic-channel-name"
-            }
-        })
-        console.log(channel.get("id"))
-        ctx.reply('Logged to console')
+        ctx.reply("Soon:tm:")
         // _____TESTING_____ //
     }
 });

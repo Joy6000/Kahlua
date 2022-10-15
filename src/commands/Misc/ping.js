@@ -1,5 +1,5 @@
 const { CommandType, commandModule } = require('@sern/handler');
-const { publish } = require("../../utils/publish")
+const { publish } = require("../../../utils/plugins.js")
 
 exports.default = commandModule({
     name: 'ping',

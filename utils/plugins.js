@@ -1,3 +1,21 @@
+module.exports.ownerOnly = function ownerOnly() {
+    const { PluginType } = require("@sern/handler");
+    const ownerIDs = ["527599831091380234"]; //! Fill your ID
+
+    return {
+        type: PluginType.Event,
+        description: "Allows only bot owner to run command",
+
+        async execute(event, controller) {
+            const [ctx] = event;
+            if (ownerIDs.includes(ctx.user.id)) return controller.next(); //* If you want to reply when the command fails due to user not being owner, you can use following
+            await ctx.reply("You are not the owner of this bot. You can not run this command.");
+
+            return controller.stop(); //! Important: It stops the execution of command!
+        },
+    };
+}
+
 // @ts-nocheck
 
 /**

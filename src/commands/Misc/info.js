@@ -1,5 +1,5 @@
 const { CommandType, commandModule } = require('@sern/handler');
-const { publish } = require("../../utils/publish")
+const { publish } = require("../../../utils/plugins.js")
 const { ApplicationCommandOptionType, EmbedBuilder } = require("discord.js")
 
 
@@ -94,7 +94,8 @@ exports.default = commandModule({
                     author: {
                         icon_url: member.user.displayAvatarURL(),
                         name: `${member.user.username}'s Info`
-                    }
+                    },
+                    color: 0x2e3137
                 }
 
 
@@ -152,7 +153,7 @@ const getStatus = (member) => {
         }
     }
 
-    let status = member.presence.status.toUpperCase()
+    let status = member.presence?.status.toUpperCase()
     if(!status) return `No status`
     let obj = statuses[status]
     return `${obj.emoji} ${obj.name}`

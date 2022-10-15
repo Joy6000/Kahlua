@@ -17,10 +17,9 @@ module.exports.Message = sequelize.define('messages', {
         allowNull: false,
         primaryKey: true,
     },
-    name: {
-        type: Sequelize.STRING,
-        unique: false,
-        allowNull: false
+    messageCount: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
     }
 })
 

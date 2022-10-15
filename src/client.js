@@ -27,7 +27,8 @@ module.exports.default = new class Kahlua extends require("discord.js").Client {
         Sern.init({
             client: this,
             defaultPrefix: 'k!',
-            commands: 'src/commands'
+            commands: 'src/commands',
+            events: 'src/events'
         })
 
 
