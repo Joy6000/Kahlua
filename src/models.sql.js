@@ -38,6 +38,32 @@ module.exports.TestChannels = sequelize.define('channels', {
 })
 
 
+module.exports.GuildSettings = sequelize.define('guilds', {
+    id: {
+        type: Sequelize.STRING,
+        unique: true,
+        allowNull: false,
+        primaryKey: true
+    },
+    messageCounts: {
+        type: Sequelize.BOOLEAN,
+        allowNull: true,
+    }
+})
+
+module.exports.MessageCounts = sequelize.define('messagecounts', {
+    id: {
+        type: Sequelize.STRING,
+        unique: true,
+        allowNull: false,
+        primaryKey: true
+    },
+    count: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+    }
+})
+
 
 
 

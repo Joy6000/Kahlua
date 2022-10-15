@@ -8,7 +8,10 @@ module.exports.default = new class Kahlua extends require("discord.js").Client {
         intents: [
             GatewayIntentBits.Guilds,
             GatewayIntentBits.GuildMembers,
-            GatewayIntentBits.GuildPresences
+            GatewayIntentBits.GuildPresences,
+            GatewayIntentBits.GuildMessages,
+            GatewayIntentBits.GuildMessageReactions,
+            GatewayIntentBits.MessageContent
         ]
     }) {
         super(options);

@@ -1,9 +1,8 @@
 .kahlua
-package-lock.json
 tsconfig.json
 Kahlua.iml
 .idea
 node_modules
 .env
-database.sqlite
+db.sqlite
 test.js
