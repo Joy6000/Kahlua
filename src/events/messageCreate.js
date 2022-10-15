@@ -3,6 +3,7 @@ exports.default = eventModule({
     name: "messageCreate",
     type: EventType.Discord,
     async execute(message) {
+        if(message.author.bot) return;
         try {
             const { GuildSettings } = require("../models.sql");
 
