@@ -1,6 +1,14 @@
+# Table of Contents:
+- [Introduction](#this-is-kahlua)
+   - [Why Can't I use this yet?](#why)
+   - [When will this be ready?](#when-will-it-be-ready)
+   - [How can I help?](#how-can-i-help)
+   - [Payment?](#what-about-a-payment)
+- [Features](#features)
+- [Links](#links)
 
 ## Kahlua
-<img src="https://github.com/Joy6000/Kahlua/blob/master/Kahlua.png?raw=true" alt="Banner" width="150" align="right"> 
+<img src="https://github.com/Joy6000/Kahlua/blob/master/Kahlua.png?raw=true" alt="Banner" width="150" align="right">
 
 ### This is Kahlua
 Kahlua is a bot. A discord bot. Written in Javascript, utilizing the library to interact with the Discord API called Discord.js. <br>
@@ -28,34 +36,35 @@ No. This is an open-source project, meaning you are contributing on a voluntary 
   - Warn
   - Purge
   - Lockdown
-  - Slowmode
+  - Slow Mode
   
 - Utility
-    - Ping
+    - Ping:::<b>Finished </b>
     - Help
     - Invite
-    - Serverinfo
-    - Userinfo
+    - Server Info:::<b>Finished </b>
+    - User Info:::<b>Finished </b>
   
 - Misc
     - 8ball
     - Avatar
     - Say
     - Poll
-    - Coinflip
+    - Coin Flip
     - Roll
     - Choose
-    - Reverse
     - Uptime
 
 - Other Features
-    - Message Counting system
+    - Message Counting system:::<b>Finished </b>
        - Total, and per user
        - Leaderboard
          - Channel, or a Command.
     - More to be decided.
+ 
+#### What is above will also function as a TODO for me. 
 
 
 ### Links
-- [Invite](https://discordapp.com/oauth2/authorize?client_id=592000000000000000&scope=bot&permissions=8)
+- [Invite](https://discord.com/api/oauth2/authorize?client_id=1029211192503308329&permissions=8&scope=bot%20applications.commands)
   - Let me know you have added and tested, and in the future you will be given credit. 
