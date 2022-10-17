@@ -45,7 +45,7 @@ No. This is an open-source project, meaning you are contributing on a voluntary 
     - User Info:::<b>Finished </b> (/info)
   
 - Misc
-    - 8ball:::<b>Finished </b> (/info)
+    - 8ball:::<b>Finished </b>
     - Avatar
     - Say
     - Poll
@@ -56,12 +56,14 @@ No. This is an open-source project, meaning you are contributing on a voluntary 
 
 - Other Features
     - Message Counting system:::<b>Finished </b>
-       - Total, and per user
+       - Per guild:::<b>Finished </b>
+       - Ability to toggle this feature:::<b>Finished </b>
        - Leaderboard
          - Channel, or a Command.
     - More to be decided.
  
 #### What is above will also function as a TODO for me. 
+    - When I finish this, I will be moving Kahlua to a dedicated hosting service. Limiting updates.
 
 
 ### Links
