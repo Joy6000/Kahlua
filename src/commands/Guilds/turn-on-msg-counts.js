@@ -6,7 +6,7 @@ const { GuildSettings } = require("../../models.sql")
 exports.default = commandModule({
     name: 'message-counts',
     description: 'Turn message counts on or off',
-    plugins: [publish(), ownerOnly()],
+    plugins: [publish()],
     options: [
         {
             name: "toggled",

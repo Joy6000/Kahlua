@@ -38,12 +38,11 @@ No. This is an open-source project, meaning you are contributing on a voluntary 
   - Lockdown
   - Slow Mode
   
-- Utility
+- Utility:::<b>Finished </b>
     - Ping:::<b>Finished </b>
-    - Help
-    - Invite
-    - Server Info:::<b>Finished </b>
-    - User Info:::<b>Finished </b>
+    - Invite:::<b>Finished </b>
+    - Server Info:::<b>Finished </b> (/info)
+    - User Info:::<b>Finished </b> (/info)
   
 - Misc
     - 8ball

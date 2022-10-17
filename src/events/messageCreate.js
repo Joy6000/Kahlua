@@ -3,7 +3,8 @@ exports.default = eventModule({
     name: "messageCreate",
     type: EventType.Discord,
     async execute(message) {
-        if(message.author.bot) return;
+        if(message.author.bot) return
+        let rndm = generateRandomNumber()
         try {
             const { GuildSettings } = require("../models.sql");
 
@@ -12,15 +13,13 @@ exports.default = eventModule({
             if (!guildS || guildS && !guildS.get("messageCounts")) return;
             if (guildS && guildS.messageCounts) {
                 const { MessageCounts } = require("../models.sql");
-                const msgCount = await MessageCounts.findOne({ where: { id: message.author.id } });
-
+                const msgCount = await MessageCounts.findOne({ where: { guildId: message.guildId, userId: message.author.id } });
                 if (!msgCount) {
-                    const newMsgCount = await MessageCounts.create({id: message.author.id, count: 1});
+                    const newMsgCount = await MessageCounts.create({id: generateRandomNumber(), userId: message.author.id, guildId: message.guildId, count: 1});
                     await newMsgCount.save();
                 } else {
                     msgCount.count += 1;
                     await msgCount.save();
-                    console.log(msgCount.count);
                 }
             }
         } catch (err) {
@@ -28,3 +27,9 @@ exports.default = eventModule({
         }
     }
 })
+
+
+
+function generateRandomNumber () {
+    return Math.floor(Math.random() * 99999999999999)
+}

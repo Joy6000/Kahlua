@@ -17,10 +17,13 @@ module.exports.default = new class Kahlua extends require("discord.js").Client {
         super(options);
     }
 
-    start() {
+    start(bool) {
         this.on("ready", () => {
             for(const property in require("./models.sql")) {
                 require("./models.sql")[property].sync()
+                if(bool) {
+                    console.log(`Synced ${property} model`)
+                }
             }
             console.log("We are in.")
         })
