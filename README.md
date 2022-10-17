@@ -45,7 +45,7 @@ No. This is an open-source project, meaning you are contributing on a voluntary 
     - User Info:::<b>Finished </b> (/info)
   
 - Misc
-    - 8ball
+    - 8ball:::<b>Finished </b> (/info)
     - Avatar
     - Say
     - Poll
