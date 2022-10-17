@@ -63,7 +63,7 @@ No. This is an open-source project, meaning you are contributing on a voluntary 
     - More to be decided.
  
 #### What is above will also function as a TODO for me. 
-    - When I finish this, I will be moving Kahlua to a dedicated hosting service. Limiting updates.
+ - When I finish this, I will be moving Kahlua to a dedicated hosting service. Limiting updates.
 
 
 ### Links
