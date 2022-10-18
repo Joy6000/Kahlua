@@ -12,7 +12,8 @@ module.exports.default = new class Kahlua extends require("discord.js").Client {
             GatewayIntentBits.GuildMessages,
             GatewayIntentBits.GuildMessageReactions,
             GatewayIntentBits.MessageContent
-        ]
+        ],
+        // restTimeOffset: 0
     }) {
         super(options);
     }
