@@ -45,8 +45,8 @@ No. This is an open-source project, meaning you are contributing on a voluntary 
   - 8ball:::<b>Finished </b>
   - Avatar:::<b>Finished </b>
   - Say:::<b>Finished </b>
-  - Poll
-  - Multiple Choice Poll
+  - Poll:::<b>Finished </b>
+  - Multiple Choice Poll:::<b>Finished </b>
   - Coin Flip
   - Roll
   - Choose
