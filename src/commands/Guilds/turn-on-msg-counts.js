@@ -1,12 +1,14 @@
 const { CommandType, commandModule } = require('@sern/handler');
-const { publish, ownerOnly } = require("../../../utils/plugins.js")
+const { publish, ownerOnly, permcheck } = require("../../../utils/plugins.js")
 const { ApplicationCommandOptionType, EmbedBuilder } = require("discord.js")
 const { GuildSettings } = require("../../models.sql")
+const { PermissionsBitField } = require('discord.js');
+
 
 exports.default = commandModule({
-    name: 'message-counts',
+    name: 'toggle-message-counts',
     description: 'Turn message counts on or off',
-    plugins: [publish()],
+    plugins: [publish(), permcheck(PermissionsBitField.Flags.ManageGuild, "You cannot use this command.")],
     options: [
         {
             name: "toggled",
