@@ -53,9 +53,15 @@ exports.default = commandModule({
 
                     const embed = {
                         description: `\n${arr.join('\n')}`,
+                        thumbnail: {
+                            url: ctx.guild.iconURL()
+                        },
                         author: {
-                            icon_url: ctx.guild.iconURL(),
                             name: `${ctx.guild.name}'s Info`
+                        },
+                        color: 0x2e3137,
+                        footer: {
+                            text: `ID: ${ctx.guildId}`
                         }
                     }
                     ctx.reply({
@@ -69,9 +75,9 @@ exports.default = commandModule({
                 let member;
 
                 if (options.getMember('user')) {
-                    member = await ctx.interaction.guild.members.fetch(options.getMember('user'))
+                    member = options.getMember('user')
                 } else {
-                    member = await ctx.interaction.guild.members.fetch(ctx.interaction.user.id)
+                    member = ctx.member
                 }
                 try {
 
@@ -95,7 +101,10 @@ exports.default = commandModule({
                         icon_url: member.user.displayAvatarURL(),
                         name: `${member.user.username}'s Info`
                     },
-                    color: 0x2e3137
+                    color: 0x2e3137,
+                    footer: {
+                        text: `Discriminator: ${member.user.discriminator}\nID: ${member.id}`
+                    }
                 }
 
 
