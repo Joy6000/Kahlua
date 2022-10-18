@@ -41,7 +41,7 @@ No. This is an open-source project, meaning you are contributing on a voluntary 
   - Server Info:::<b>Finished </b> (/info)
   - User Info:::<b>Finished </b> (/info)
 
-- Misc
+- Misc:::<b>Finished </b>
   - 8ball:::<b>Finished </b>
   - Avatar:::<b>Finished </b>
   - Say:::<b>Finished </b>
