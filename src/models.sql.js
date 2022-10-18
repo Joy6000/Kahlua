@@ -1,5 +1,5 @@
 const { sequelize }= require("./client")
-const { Sequelize } = require("sequelize")
+const { Sequelize, DataTypes } = require("sequelize")
 
 module.exports.Message = sequelize.define('messages', {
     id: {
