@@ -1,11 +1,11 @@
 const { CommandType, commandModule } = require('@sern/handler');
-const { publish, ownerOnly } = require("../../../utils/plugins.js")
+const { publish } = require("../../../utils/plugins.js")
 const { ApplicationCommandOptionType } = require("discord.js")
 
 exports.default = commandModule({
     name: 'eightball',
     description: 'Ask the 8ball',
-    plugins: [publish(), ownerOnly()],
+    plugins: [publish()],
     type: CommandType.Slash,
     options: [
         {
