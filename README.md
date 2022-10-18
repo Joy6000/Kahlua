@@ -1,9 +1,9 @@
 # Table of Contents:
 - [Introduction](#this-is-kahlua)
-   - [Why Can't I use this yet?](#why)
-   - [When will this be ready?](#when-will-it-be-ready)
-   - [How can I help?](#how-can-i-help)
-   - [Payment?](#what-about-a-payment)
+  - [Why Can't I use this yet?](#why)
+  - [When will this be ready?](#when-will-it-be-ready)
+  - [How can I help?](#how-can-i-help)
+  - [Payment?](#what-about-a-payment)
 - [Features](#features)
 - [Links](#links)
 
@@ -30,40 +30,37 @@ No. This is an open-source project, meaning you are contributing on a voluntary 
 
 ### Features
 - Moderation
-  - Kick
-  - Ban
-  - Mute
   - Warn
   - Purge
   - Lockdown
   - Slow Mode
-  
+
 - Utility:::<b>Finished </b>
-    - Ping:::<b>Finished </b>
-    - Invite:::<b>Finished </b>
-    - Server Info:::<b>Finished </b> (/info)
-    - User Info:::<b>Finished </b> (/info)
-  
+  - Ping:::<b>Finished </b>
+  - Invite:::<b>Finished </b>
+  - Server Info:::<b>Finished </b> (/info)
+  - User Info:::<b>Finished </b> (/info)
+
 - Misc
-    - 8ball:::<b>Finished </b>
-    - Avatar
-    - Say
-    - Poll
-    - Coin Flip
-    - Roll
-    - Choose
-    - Uptime
+  - 8ball:::<b>Finished </b>
+  - Avatar:::<b>Finished </b>
+  - Say
+  - Poll
+  - Coin Flip
+  - Roll
+  - Choose
+  - Uptime
 
 - Other Features
-    - Message Counting system:::<b>Finished </b>
-       - Per guild:::<b>Finished </b>
-       - Ability to toggle this feature:::<b>Finished </b>
-       - Leaderboard
-         - Channel, or a Command.
-    - More to be decided.
- 
-#### What is above will also function as a TODO for me. 
- - When I finish this, I will be moving Kahlua to a dedicated hosting service. Limiting updates.
+  - Message Counting system:::<b>Finished </b>
+    - Per guild:::<b>Finished </b>
+    - Ability to toggle this feature:::<b>Finished </b>
+    - Leaderboard
+      - Channel, or a Command.
+  - More to be decided.
+
+#### What is above will also function as a TODO for me.
+- When I finish this, I will be moving Kahlua to a dedicated hosting service. Limiting updates.
 
 
 ### Links
