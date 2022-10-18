@@ -1,7 +1,6 @@
-const { Sern, CommandType, commandModule, } = require('@sern/handler');
+const { CommandType, commandModule, } = require('@sern/handler');
 const { publish } = require('../../../utils/plugins');
-const { ActionRowBuilder, ModalBuilder, TextInputBuilder, TextInputStyle,ApplicationCommandOptionType } = require('discord.js');
-const { InteractionCollector } = require('discord.js');
+const { ApplicationCommandOptionType } = require('discord.js');
 
 exports.default = commandModule({
     description: 'Say',

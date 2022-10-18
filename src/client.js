@@ -1,5 +1,4 @@
 const { GatewayIntentBits } = require("discord.js")
-const { Sern } = require("@sern/handler");
 const { Sequelize } = require("sequelize");
 require('dotenv').config()
 

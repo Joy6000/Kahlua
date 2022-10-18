@@ -1,8 +1,5 @@
 const { sequelize }= require("./client")
 const { Sequelize } = require("sequelize")
-const { DataTypes } = require("sequelize")
-
-
 
 module.exports.Message = sequelize.define('messages', {
     id: {
@@ -17,7 +14,6 @@ module.exports.Message = sequelize.define('messages', {
     }
 })
 
-
 module.exports.TestChannels = sequelize.define('channels', {
     id: {
         type: Sequelize.STRING,
@@ -30,7 +26,6 @@ module.exports.TestChannels = sequelize.define('channels', {
         unique: false,
     }
 })
-
 
 module.exports.GuildSettings = sequelize.define('guildssettings', {
     id: {
@@ -94,5 +89,3 @@ module.exports.UserData = sequelize.define('userdata', {
         allowNull: true
     }
 })
-
-
