@@ -47,10 +47,9 @@ No. This is an open-source project, meaning you are contributing on a voluntary 
   - Say:::<b>Finished </b>
   - Poll:::<b>Finished </b>
   - Multiple Choice Poll:::<b>Finished </b>
-  - Coin Flip
-  - Roll
-  - Choose
-  - Uptime
+  - Coin Flip:::<b>Finished </b>
+  - Roll:::<b>Finished </b>
+  - Uptime:::<b>Finished </b>
 
 - Other Features
   - Message Counting system:::<b>Finished </b>
