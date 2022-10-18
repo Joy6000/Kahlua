@@ -1,10 +1,11 @@
 const { EventType, eventModule } = require("@sern/handler");
+
 exports.default = eventModule({
     name: "messageCreate",
     type: EventType.Discord,
     async execute(message) {
         if(message.author.bot) return
-        let rndm = generateRandomNumber()
+        
         try {
             const { GuildSettings } = require("../models.sql");
 

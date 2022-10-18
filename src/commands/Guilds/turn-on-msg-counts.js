@@ -1,9 +1,7 @@
 const { CommandType, commandModule } = require('@sern/handler');
-const { publish, ownerOnly, permcheck } = require("../../../utils/plugins.js")
-const { ApplicationCommandOptionType, EmbedBuilder } = require("discord.js")
+const { publish, permcheck } = require("../../../utils/plugins.js")
+const { ApplicationCommandOptionType, PermissionsBitField } = require("discord.js")
 const { GuildSettings } = require("../../models.sql")
-const { PermissionsBitField } = require('discord.js');
-
 
 exports.default = commandModule({
     name: 'toggle-message-counts',

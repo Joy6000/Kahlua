@@ -1,7 +1,6 @@
 const { CommandType, commandModule } = require('@sern/handler');
 const { publish } = require("../../../utils/plugins.js")
-const { ApplicationCommandOptionType, EmbedBuilder } = require("discord.js")
-
+const { ApplicationCommandOptionType } = require("discord.js")
 
 exports.default = commandModule({
     name: 'info',
