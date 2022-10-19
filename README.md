@@ -52,11 +52,12 @@ No. This is an open-source project, meaning you are contributing on a voluntary 
   - Uptime:::<b>Finished </b>
 
 - Other Features
-  - Message Counting system:::<b>Finished </b>
+  - Message Counting System
     - Per guild:::<b>Finished </b>
     - Ability to toggle this feature:::<b>Finished </b>
     - Leaderboard
-      - Channel, or a Command.
+      - Command:::<b>Finished </b>
+      - Channel
   - More to be decided.
 
 #### What is above will also function as a TODO for me.
