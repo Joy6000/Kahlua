@@ -11,7 +11,8 @@ exports.default = commandModule({
         {
             name: "toggled",
             description: "On or Off",
-            type: ApplicationCommandOptionType.Boolean
+            type: ApplicationCommandOptionType.Boolean,
+            required: true
         }
     ],
     type: CommandType.Slash,

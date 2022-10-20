@@ -17,7 +17,7 @@ exports.default = commandModule({
 
         const all = await MessageCounts.findAll({ where: { guildId: ctx.guildId } })
         let countedArr = [];
-        let msg = `**Top NumberOfPeopleInArray People With the Most Messages Sent in *${ctx.guild.name}*:**\n\n`;
+        let msg = `**Top NumberOfPeopleInArray Persons With the Most Messages Sent in *${ctx.guild.name}*:**\n\n`;
         let id;
         let len = 0;
 
@@ -40,6 +40,9 @@ exports.default = commandModule({
 
             for (const counted of countedArr) {
                 msg += `#${countedArr.indexOf(counted) + 1}: ${counted.user} with ${counted.count} messages\n`
+            }
+            if (len === 0) {
+                msg = "No one has sent any messages yet!"
             }
 
             ctx.reply({
