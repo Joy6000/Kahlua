@@ -52,13 +52,30 @@ No. This is an open-source project, meaning you are contributing on a voluntary 
   - Uptime:::<b>Finished </b>
 
 - Other Features
-  - Message Counting System
+  - Message Counting System:::<b>Finished </b>
     - Per guild:::<b>Finished </b>
     - Ability to toggle this feature:::<b>Finished </b>
-    - Leaderboard
+    - Leaderboard:::<b>Finished </b>
       - Command:::<b>Finished </b>
-      - Channel
+      - Channel:::<b>**Discontinued**`*` </b>
+  - Economy
+    - Ability to toggle this feature
+    - In tandem with the Message Counting System
+      - You will earn small amounts of money for being active within the server.
+    - You can: 
+      - Work for money
+      - Rob other users
+      - Bet money
+      - Invest in stocks
+      - Buy items
+      - Sell items
+      - View your balance
+      - View your inventory
+      - View your stocks
+      - And more
   - More to be decided.
+
+`*`Bad idea, will be removed.
 
 #### What is above will also function as a TODO for me.
 - When I finish this, I will be moving Kahlua to a dedicated hosting service. Limiting updates.
