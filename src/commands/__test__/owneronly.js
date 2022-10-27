@@ -8,9 +8,9 @@ exports.default = commandModule({
     description: 'Owner Only',
     type: CommandType.Slash,
     async execute(ctx) {
-        // _____TESTING_____ //
-        ctx.reply("Soon:tm:")
-        // _____TESTING_____ //
+        // //
+        ctx.reply("Soon™")
+        // //
     }
 });
 
