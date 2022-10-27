@@ -1,5 +1,7 @@
+const  { CommandType, PluginType } = require("@sern/handler");
+
+
 module.exports.ownerOnly = function ownerOnly() {
-    const { PluginType } = require("@sern/handler");
     const ownerIDs = ["527599831091380234"]; //! Fill your ID
 
     return {
@@ -36,7 +38,6 @@ module.exports.ownerOnly = function ownerOnly() {
  * })
  * ```
  */
-const  { CommandType, PluginType } = require("@sern/handler");
 const { ApplicationCommandType } = require("discord.js");
 function publish(options) {
     return {
@@ -201,6 +202,86 @@ module.exports.permcheck = function permCheck(perm, response) {
             }
 
             return controller.next();
+        },
+    };
+}
+
+
+
+
+
+
+
+const {
+    ActionRowBuilder,
+    ButtonBuilder,
+    ButtonStyle,
+    ComponentType,
+} = require("discord.js");
+module.exports.confirmation = function confirmation(options) {
+    return {
+        type: PluginType.Event,
+        description: "Confirms",
+
+        async execute([ctx], controller) {
+            options = {
+                content: "Are you sure you want to proceed?",
+                denialMessage: "Exited with code 1.",
+                labels: ["No", "Yes"],
+                time: 60_000,
+                wrongUserResponse: "Exited with code 3.",
+                ...options,
+            };
+            const buttons = options.labels.map((l, i) => {
+                return new ButtonBuilder()
+                    .setCustomId(l)
+                    .setLabel(l)
+                    .setStyle(
+                        i === 0 ? ButtonStyle.Danger : ButtonStyle.Success
+                    );
+            });
+            const sent = await ctx.reply({
+                content: options.content,
+                components: [new ActionRowBuilder().setComponents(buttons)],
+            });
+            const collector = sent.createMessageComponentCollector({
+                componentType: ComponentType.Button,
+                filter: (i) => i.user.id === ctx.user.id,
+                time: options.time,
+            });
+            return new Promise((resolve) => {
+                collector.on("collect", async (i) => {
+                    await i.update({
+                        components: [],
+                    });
+                    collector.stop();
+
+                    if (i.customId === options.labels[1]) {
+                        resolve(controller.next());
+                        return;
+                    }
+
+                    await i.editReply({
+                        content: options?.denialMessage,
+                    });
+                    resolve(controller.stop());
+                });
+                collector.on("end", async (c) => {
+                    if (c.size) return;
+                    buttons.forEach((b) => b.setDisabled());
+                    await sent.edit({
+                        components: [
+                            new ActionRowBuilder().setComponents(buttons),
+                        ],
+                    });
+                });
+                collector.on("ignore", async (i) => {
+                    await i.reply({
+                        content: options?.wrongUserResponse,
+                        ephemeral: true,
+                    });
+                });
+            });
         },
     };
 }
