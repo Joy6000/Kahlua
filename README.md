@@ -33,7 +33,7 @@ No. This is an open-source project, meaning you are contributing on a voluntary 
   - Warn
   - Purge
   - Lockdown
-  - Slow Mode
+  - Slow Mode:::<b>Finished </b>
 
 - Utility:::<b>Finished </b>
   - Ping:::<b>Finished </b>
