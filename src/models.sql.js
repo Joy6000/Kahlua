@@ -37,10 +37,14 @@ module.exports.GuildSettings = sequelize.define('guildssettings', {
     messageCounts: {
         type: Sequelize.BOOLEAN,
         allowNull: true,
+    },
+    warnsData: {
+        type: Sequelize.STRING,
+        allowNull: true
     }
 })
 
-module.exports.MessageCounts = sequelize.define('CountMessages', {
+module.exports.UserData = sequelize.define('CountMessages', {
     id: {
         type: Sequelize.INTEGER,
         unique: true,
@@ -61,6 +65,10 @@ module.exports.MessageCounts = sequelize.define('CountMessages', {
     count: {
         type: Sequelize.INTEGER,
         allowNull: true,
+    },
+    warns: {
+        type: Sequelize.INTEGER,
+        allowNull: true
     }
 })
 
@@ -74,18 +82,5 @@ module.exports.GuildData = sequelize.define('guilddata', {
     userdata: {
         type: Sequelize.ARRAY(DataTypes.JSON),
         allowNull: true,
-    }
-})
-
-module.exports.UserData = sequelize.define('userdata', {
-    id: {
-        type: Sequelize.STRING,
-        unique: true,
-        allowNull: false,
-        primaryKey: true
-    },
-    Guilds: {
-        type: Sequelize.ARRAY(DataTypes.JSONB),
-        allowNull: true
     }
 })

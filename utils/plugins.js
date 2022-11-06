@@ -2,7 +2,7 @@ const  { CommandType, PluginType } = require("@sern/handler");
 
 
 module.exports.ownerOnly = function ownerOnly() {
-    const ownerIDs = ["527599831091380234"]; //! Fill your ID
+    const ownerIDs = ["1036672081607262218"]; //! Fill your ID
 
     return {
         type: PluginType.Event,
