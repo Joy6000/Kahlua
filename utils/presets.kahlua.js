@@ -14,7 +14,7 @@ const { CommandType, commandModule } = require('@sern/handler');
 const { publish, ownerOnly, permcheck } = require("../../../utils/plugins.js")
 const { Model } = require("../../models.sql")
 const { ApplicationCommandOptionType } = require("discord.js")
-const { PermissionsBitField: { FLAGS: perms } } = require("discord.js")
+const { PermissionsBitField: { Flags: perms } } = require("discord.js")
 
 exports.default = commandModule({
     name: 'name-of-command',
