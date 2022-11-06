@@ -16,8 +16,7 @@ It has finished it's main production time! The bot is now hosted 24/7. [Invite i
 There will be more updates. One, to keep up with the API, and two, adding new features!
 
 #### When will it be ready?
-When it's ready. <br>
-I don't have a set date for when it will be ready. <br>
+[Now!](https://discord.com/api/oauth2/authorize?client_id=1037198491652472964&permissions=8&scope=bot%20applications.commands)
 
 #### Do you need help with this at all?
 No, not really. But open a PR if you want! You can contact me on Discord, at Tuva$4626. <br>
