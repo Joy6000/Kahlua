@@ -7,10 +7,10 @@ exports.default = commandModule({
     plugins: [publish()],
     type: CommandType.Slash,
     async execute(ctx, args) {
-        const { MessageCounts, GuildSettings } = require("../../models.sql")
+        const { MessageCounts: UserData, GuildSettings } = require("../../models.sql")
 
         const _guild = await GuildSettings.findOne({ where: { id: ctx.guildId } })
-        const found = await MessageCounts.findOne({ where: { guildId: ctx.guildId, userId: ctx.user.id } })
+        const found = await UserData.findOne({ where: { guildId: ctx.guildId, userId: ctx.user.id } })
         const enabled = _guild.get("messageCounts")
 
         if (!enabled) return ctx.reply("Sorry, this guild currently doesn't count messages! You can turn this on by"
