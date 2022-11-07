@@ -1,6 +1,5 @@
 # Table of Contents:
 - [Introduction](#this-is-kahlua)
-  - [Why Can't I use this yet?](#why)
   - [When will this be ready?](#when-will-it-be-ready)
   - [How can I help?](#how-can-i-help)
   - [Payment?](#what-about-a-payment)
