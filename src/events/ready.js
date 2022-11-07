@@ -5,9 +5,7 @@ exports.default = eventModule({
     type: EventType.Discord,
     async execute(client) {
         console.log(`${client.guilds.cache.size} servers`)
-
-        client.user.setPresence({ activities: [{ name: `${client.guilds.cache.size} Servers` }], status: 'online' });
-        client.user.setActivity('discord.js', { type: ActivityType.Watching });
+        client.user.setActivity(`${client.guilds.cache.size} Servers`, { type: ActivityType.Watching });
 
     }
 })
