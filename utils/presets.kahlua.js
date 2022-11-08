@@ -1,3 +1,6 @@
+/////// PRESETS FOR CREATING COMMANDS AND EVENTS. SERN /////// 
+
+
 // EVENTS //
 const { EventType, eventModule } = require("@sern/handler");
 exports.default = eventModule({
@@ -18,12 +21,12 @@ const { PermissionsBitField: { Flags: perms } } = require("discord.js")
 
 exports.default = commandModule({
     name: 'name-of-command',
-    description: 'description-of-command',
+    description: 'Description of Command',
     plugins: [publish(), ownerOnly(), permcheck(perms.PermissionHere)],
     options: [
         {
             name: "option-name",
-            description: "description-of-option",
+            description: "Description of Option",
             type: ApplicationCommandOptionType.OptionTypeHere,
             required: true
         }
