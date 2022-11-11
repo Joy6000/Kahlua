@@ -23,36 +23,36 @@ You can help me write the guide, or you can propose some features by making a PR
 #### What about a payment?
 No. This is an open-source project, meaning you are contributing on a voluntary basis. <br>
 
-### Features:::<b>Finished </b>
-- Moderation:::<b>Finished </b>
-  - Warn:::<b>Finished </b>
-  - Purge:::<b>Finished </b>
-  - Slow Mode:::<b>Finished </b>
+### Features
+- [x] Moderation
+  - [x] Warn
+  - [x] Purge
+  - [x] Slow Mode
 
-- Utility:::<b>Finished </b>
-  - Ping:::<b>Finished </b>
-  - Invite:::<b>Finished </b>
-  - Server Info:::<b>Finished </b> (/info)
-  - User Info:::<b>Finished </b> (/info)
+- [x] Utility
+  - [x] Ping
+  - [x] Invite
+  - [x] Server Info (/info)
+  - [x] User Info (/info)
 
-- Misc:::<b>Finished </b>
-  - 8ball:::<b>Finished </b>
-  - Avatar:::<b>Finished </b>
-  - Say:::<b>Finished </b>
-  - Poll:::<b>Finished </b>
-  - Multiple Choice Poll:::<b>Finished </b>
-  - Coin Flip:::<b>Finished </b>
-  - Roll:::<b>Finished </b>
-  - Uptime:::<b>Finished </b>
+- [x] Misc
+  - [x] 8ball
+  - [x] Avatar
+  - [x] Say
+  - [x] Poll
+  - [x] Multiple Choice Poll
+  - [x] Coin Flip
+  - [x] Roll
+  - [x] Uptime
 
 - Other Features
-  - Message Counting System:::<b>Finished </b>
-    - Per guild:::<b>Finished </b>
-    - Ability to toggle this feature:::<b>Finished </b>
-    - Leaderboard:::<b>Finished </b>
-      - Command:::<b>Finished </b>
-      - Channel:::<b>**Discontinued**`*` </b>
-  - More to be decided.
+  - [x] Message Counting System
+    - [x] Per guild
+    - [x] Ability to toggle this feature
+    - [x] Leaderboard
+      - [x] Command
+      - [ ] Channel <b>**Discontinued**`*` </b>
+  - [ ] More to be decided.
 
 `*`Bad idea, will be removed.
 
