@@ -21,10 +21,10 @@ exports.default = commandModule({
             const [, options] = args
             const toggled = options.getBoolean("toggled")
 
-            const guild = await GuildSettings.findOne({where: {id: ctx.guildId}})
+            let guild = await GuildSettings.findOne({where: {id: ctx.guildId}})
             if (!guild) {
-                const newGuild = await GuildSettings.create({id: ctx.guildId, messageCounts: toggled})
-                await newGuild.save()
+                guild = await GuildSettings.create({id: ctx.guildId, messageCounts: toggled})
+                await guild.save()
             } else {
                 guild.messageCounts = toggled
                 await guild.save()

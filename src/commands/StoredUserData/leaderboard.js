@@ -7,7 +7,7 @@ exports.default = commandModule({
     description: 'Displays message leaderboard',
     type: CommandType.Slash,
     async execute(ctx, args) {
-        const { MessageCounts: UserData, GuildSettings } = require("../../models.sql")
+        const { UserData, GuildSettings } = require("../../models.sql")
 
         const _guild = await GuildSettings.findOne({ where: { id: ctx.guildId } })
         const enabled = _guild.get("messageCounts")
@@ -46,7 +46,7 @@ exports.default = commandModule({
             }
 
             ctx.reply({
-                content: msg.replace("NumberOfPeopleInArray", len.toString())
+                content: msg.replace("NumberOfPeopleInArray", len.toString()).replace("Persons", len === 1 ? "Person" : "People")
             })
         } catch (e) {
             console.log(e)

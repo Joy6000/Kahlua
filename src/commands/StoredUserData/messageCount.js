@@ -7,29 +7,32 @@ exports.default = commandModule({
     plugins: [publish()],
     type: CommandType.Slash,
     async execute(ctx, args) {
-        const { MessageCounts: UserData, GuildSettings } = require("../../models.sql")
+        try {
+            const {UserData, GuildSettings} = require("../../models.sql")
 
-        const _guild = await GuildSettings.findOne({ where: { id: ctx.guildId } })
-        const found = await UserData.findOne({ where: { guildId: ctx.guildId, userId: ctx.user.id } })
-        const enabled = _guild.get("messageCounts")
+            const _guild = await GuildSettings.findOne({where: {id: ctx.guildId}})
+            const found = await UserData.findOne({where: {guildId: ctx.guildId, userId: ctx.user.id}})
+            const enabled = _guild.get("messageCounts")
 
-        if (!enabled) return ctx.reply("Sorry, this guild currently doesn't count messages! You can turn this on by"
-            + " using the `toggle-message-counts` command! Though, only admins can do this.");
+            if (!enabled) return ctx.reply("Sorry, this guild currently doesn't count messages! You can turn this on by"
+                + " using the `toggle-message-counts` command! Though, only admins can do this.");
 
-        const responses = [
-            "Nice!",
-            "Awesome!",
-            "Awesome job!",
-            "Great job!",
-            "Cool!",
-            "Yeah!"
-        ]
+            const responses = [
+                "Nice!",
+                "Awesome!",
+                "Awesome job!",
+                "Great job!",
+                "Cool!",
+                "Yeah!"
+            ]
 
-        const res = responses[Math.floor(Math.random() * responses.length)]
+            const res = responses[Math.floor(Math.random() * responses.length)]
 
-        ctx.reply({
-            content: `You have sent ${found.get("count")} messages. ${res}`
-        })
-
+            ctx.reply({
+                content: `You have sent ${found.get("count")} messages. ${res}`
+            })
+        } catch (e) {
+            console.log(e)
+        }
     }
 })
